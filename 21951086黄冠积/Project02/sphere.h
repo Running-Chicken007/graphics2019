@@ -20,77 +20,21 @@ class Sphere {
 public:
 	GLuint* vboId;
 	GLuint vert, texcoord;
-	GLfloat* verts;//±£´æ¶¥µãÓë·¨ÏòÁ¿µÄÖ¸Õë
-	GLfloat* texcoords;//±£´æÎÆÀí×ø±êµÄÖ¸Õë
+	GLfloat* verts;//ä¿å­˜é¡¶ç‚¹ä¸æ³•å‘é‡çš„æŒ‡é’ˆ
+	GLfloat* texcoords;//ä¿å­˜çº¹ç†åæ ‡çš„æŒ‡é’ˆ
 	GLfloat vertNum;
-	/*Sphere(int m, int n) {
-		vertNum = m*n * 4;//¶¥µã×ÜÊı
-		verts = new GLfloat[vertNum * 5];//Ã¿¸ö¶¥µãÓĞxyzÈı¸ö·ÖÁ¿,Òò´Ë*3
-		float stepAngZ = PI / m;//×İÏò½Ç¶ÈÃ¿´ÎÔö¼ÓµÄÖµ
-		float stepAngXY = PI2 / n;//ºáÏò½Ç¶ÈÃ¿´ÎÔö¼ÓµÄÖµ
-		float angZ = 0.0;//³õÊ¼µÄ×İÏò½Ç¶È
-		float angXY = 0.0;//³õÊ¼µÄºáÏò½Ç¶È
-		int index = 0;
-		for (int i = 0; i<m; i++) {
-			for (int j = 0; j<n; j++) {
-				//¹¹ÔìÒ»¸ö¶¥µã
-				float x1 = sin(angZ)*cos(angXY);
-				float y1 = sin(angZ)*sin(angXY);
-				float z1 = cos(angZ);
-				verts[index] = x1; index++;
-				verts[index] = y1; index++;
-				verts[index] = z1; index++;
-				float v1 = angZ / PI;
-				float u1 = angXY / PI2;
-				verts[index] = u1; index++;
-				verts[index] = v1; index++;
-				float x2 = sin(angZ + stepAngZ)*cos(angXY);
-				float y2 = sin(angZ + stepAngZ)*sin(angXY);
-				float z2 = cos(angZ + stepAngZ);
-				verts[index] = x2; index++;
-				verts[index] = y2; index++;
-				verts[index] = z2; index++;
-				float v2 = (angZ + stepAngZ) / PI;
-				float u2 = angXY / PI2;
-				verts[index] = u2; index++;
-				verts[index] = v2; index++;
-				float x3 = sin(angZ + stepAngZ)*cos(angXY + stepAngXY);
-				float y3 = sin(angZ + stepAngZ)*sin(angXY + stepAngXY);
-				float z3 = cos(angZ + stepAngZ);
-				verts[index] = x3; index++;
-				verts[index] = y3; index++;
-				verts[index] = z3; index++;
-				float v3 = (angZ + stepAngZ) / PI;
-				float u3 = (angXY + stepAngXY) / PI2;
-				verts[index] = u3; index++;
-				verts[index] = v3; index++;
-				float x4 = sin(angZ)*cos(angXY + stepAngXY);
-				float y4 = sin(angZ)*sin(angXY + stepAngXY);
-				float z4 = cos(angZ);
-				verts[index] = x4; index++;
-				verts[index] = y4; index++;
-				verts[index] = z4; index++;
-				float v4 = angZ / PI;
-				float u4 = (angXY + stepAngXY) / PI2;
-				verts[index] = u4; index++;
-				verts[index] = v4; index++;
-				angXY += stepAngXY;
-			}
-			angXY = 0.0;//Ã¿´ÎºáÏòµ½´ï2PI½Ç¶ÈÔòºáÏò½Ç¶È¹é0
-			angZ += stepAngZ;
-		}*/
 	Sphere(int m, int n) {
-		vertNum = m * n * 4 * 1.5;//¶¥µã×ÜÊı
-		verts = new GLfloat[vertNum * 5];//Ã¿¸ö¶¥µãÓĞxyzÈı¸ö·ÖÁ¿,Òò´Ë*3
-		float stepAngZ = PI / m;//×İÏò½Ç¶ÈÃ¿´ÎÔö¼ÓµÄÖµ
-		float stepAngXY = PI2 / n;//ºáÏò½Ç¶ÈÃ¿´ÎÔö¼ÓµÄÖµ
-		float angZ = 0.0;//³õÊ¼µÄ×İÏò½Ç¶È
-		float angXY = 0.0;//³õÊ¼µÄºáÏò½Ç¶È
+		vertNum = m * n * 4 * 1.5;//é¡¶ç‚¹æ€»æ•°
+		verts = new GLfloat[vertNum * 5];//æ¯ä¸ªé¡¶ç‚¹æœ‰xyzä¸‰ä¸ªåˆ†é‡,å› æ­¤*3
+		float stepAngZ = PI / m;//çºµå‘è§’åº¦æ¯æ¬¡å¢åŠ çš„å€¼
+		float stepAngXY = PI2 / n;//æ¨ªå‘è§’åº¦æ¯æ¬¡å¢åŠ çš„å€¼
+		float angZ = 0.0;//åˆå§‹çš„çºµå‘è§’åº¦
+		float angXY = 0.0;//åˆå§‹çš„æ¨ªå‘è§’åº¦
 
 		int index = 0;
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				//¹¹ÔìÒ»¸ö¶¥µã
+				//æ„é€ ä¸€ä¸ªé¡¶ç‚¹
 				float x1 = sin(angZ)*cos(angXY);
 				float y1 = sin(angZ)*sin(angXY);
 				float z1 = cos(angZ);
@@ -150,10 +94,10 @@ public:
 
 				angXY += stepAngXY;
 			}
-			angXY = 0.0;//Ã¿´ÎºáÏòµ½´ï2PI½Ç¶ÈÔòºáÏò½Ç¶È¹é0
+			angXY = 0.0;//æ¯æ¬¡æ¨ªå‘åˆ°è¾¾2PIè§’åº¦åˆ™æ¨ªå‘è§’åº¦å½’0
 			angZ += stepAngZ;
 		}
-	}//mÊÇ×İÏòÏ¸·Ö³Ì¶È,nÊÇºáÏòÏ¸·Ö³Ì¶È
+	}//mæ˜¯çºµå‘ç»†åˆ†ç¨‹åº¦,næ˜¯æ¨ªå‘ç»†åˆ†ç¨‹åº¦
 	~Sphere() {}
 };
 
