@@ -10,6 +10,7 @@
    因此再比较月亮上点到太阳中心线与地球中心到太阳中心线的θ角 和 太阳到地球的切边与地球中心到太阳中心线的夹角α，如下图所示，
    如果θ<α,则表示月亮该点部分被遮挡了。
    ![image](https://github.com/Running-Chicken007/graphics2019/blob/master/21951086%E9%BB%84%E5%86%A0%E7%A7%AF/Project02/yinying.png)
+   ![Image text](https://github.com/Running-Chicken007/graphics2019/blob/master/21951086%E9%BB%84%E5%86%A0%E7%A7%AF/Project02/yinying.png)
    实现的效果如下所示：
    ![image](https://github.com/Running-Chicken007/graphics2019/blob/master/21951086%E9%BB%84%E5%86%A0%E7%A7%AF/Project02/%E6%95%88%E6%9E%9C.gif)
    
