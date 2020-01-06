@@ -16,11 +16,11 @@
 
 移动摄像头观看模型：
 
-![image](https://github.com/Running-Chicken007/graphics2019/blob/second/21951086%E9%BB%84%E5%86%A0%E7%A7%AF/Project03/show2.gif)
+![image](https://github.com/Running-Chicken007/graphics2019/blob/hw_03/21951086%E9%BB%84%E5%86%A0%E7%A7%AF/Project03/show2.gif)
 
 鼠标滑轮放大缩小模型;  点击鼠标，旋转模型：
 
-![image](https://github.com/Running-Chicken007/graphics2019/blob/second/21951086%E9%BB%84%E5%86%A0%E7%A7%AF/Project03/show1.gif)
+![image](https://github.com/Running-Chicken007/graphics2019/blob/hw_03/21951086%E9%BB%84%E5%86%A0%E7%A7%AF/Project03/show1.gif)
 
 
 gif图有点模糊，可以查看文件夹中的  效果展示.mp4   查看完整效果。
