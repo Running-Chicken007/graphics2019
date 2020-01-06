@@ -13,6 +13,6 @@
    
    实现的效果如下所示：
    
-   ![image](https://github.com/Running-Chicken007/graphics2019/blob/master/21951086%E9%BB%84%E5%86%A0%E7%A7%AF/Project02/%E6%95%88%E6%9E%9C.gif)
+   ![image](https://github.com/Running-Chicken007/graphics2019/blob/hw_02/21951086%E9%BB%84%E5%86%A0%E7%A7%AF/Project02/%E6%95%88%E6%9E%9C.gif)
    
   
